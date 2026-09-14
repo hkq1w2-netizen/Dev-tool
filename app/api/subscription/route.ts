@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { getSession } from "@/lib/auth/session";
-import { dbUpdateUserPlan } from "@/lib/db/store";
 
 export async function GET() {
   try {
@@ -23,24 +22,27 @@ export async function GET() {
   }
 }
 
-export async function POST(req: Request) {
+export async function POST() {
   try {
     const session = await getSession();
     if (!session) {
-      return NextResponse.json({ success: false, data: null, error: { code: "UNAUTHORIZED", message: "Not logged in" } });
+      return NextResponse.json({ success: false, data: null, error: { code: "UNAUTHORIZED", message: "Not logged in" } }, { status: 401 });
     }
 
-    const { targetPlan = "pro" } = await req.json();
-
-    await dbUpdateUserPlan(session.id, targetPlan);
-
-    return NextResponse.json({
-      success: true,
-      data: { message: `Successfully upgraded account to ${targetPlan.toUpperCase()} plan!` },
-      error: null,
-    });
+    // Secure Payment Architecture: Client cannot directly upgrade via plain POST
+    return NextResponse.json(
+      { 
+        success: false, 
+        data: null, 
+        error: { 
+          code: "PAYMENT_REQUIRED", 
+          message: "Paid upgrades require valid checkout session via Stripe or Paddle webhooks." 
+        } 
+      },
+      { status: 402 }
+    );
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : String(err);
-    return NextResponse.json({ success: false, data: null, error: { code: "SERVER_ERROR", message } });
+    return NextResponse.json({ success: false, data: null, error: { code: "SERVER_ERROR", message } }, { status: 500 });
   }
 }

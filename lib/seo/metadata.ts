@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://devtool.online";
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://devtools.online";
 const SITE_NAME = "DevTool.online";
 
 export function generateSeoMetadata({

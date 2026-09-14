@@ -1,6 +1,6 @@
 import { ToolMetadata } from "@/types/tool";
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://devtool.online";
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://devtools.online";
 
 export function generateToolJsonLd(tool: ToolMetadata) {
   const toolUrl = `${APP_URL}/tools/${tool.slug}`;

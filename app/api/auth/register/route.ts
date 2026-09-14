@@ -2,17 +2,28 @@ import { NextResponse } from "next/server";
 import { dbFindUserByEmail, dbCreateUser } from "@/lib/db/store";
 import { hashPassword, signToken } from "@/lib/auth/jwt";
 import { AUTH_COOKIE_NAME } from "@/lib/auth/session";
+import { RegisterSchema } from "@/lib/validation/schemas";
 
 export async function POST(req: Request) {
   try {
-    const { name, email, password } = await req.json();
+    const body = await req.json();
+    const parseResult = RegisterSchema.safeParse(body);
 
-    if (!name || !email || !password || password.length < 6) {
+    if (!parseResult.success) {
       return NextResponse.json(
-        { success: false, data: null, error: { code: "INVALID_INPUT", message: "Please provide name, valid email, and a password of at least 6 characters." } },
+        { 
+          success: false, 
+          data: null, 
+          error: { 
+            code: "INVALID_INPUT", 
+            message: parseResult.error.errors[0]?.message || "Invalid payload." 
+          } 
+        },
         { status: 400 }
       );
     }
+
+    const { name, email, password } = parseResult.data;
 
     const existing = await dbFindUserByEmail(email);
     if (existing) {
@@ -25,8 +36,8 @@ export async function POST(req: Request) {
     const passwordHash = await hashPassword(password);
 
     const userPayload = await dbCreateUser({
-      name: name.trim(),
-      email: email.toLowerCase().trim(),
+      name,
+      email,
       passwordHash,
     });
 
@@ -36,8 +47,8 @@ export async function POST(req: Request) {
     res.cookies.set(AUTH_COOKIE_NAME, token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      maxAge: 7 * 24 * 60 * 60,
+      sameSite: "strict",
+      maxAge: 24 * 60 * 60,
       path: "/",
     });
 

@@ -2,17 +2,28 @@ import { NextResponse } from "next/server";
 import { dbFindUserByEmail } from "@/lib/db/store";
 import { comparePassword, signToken } from "@/lib/auth/jwt";
 import { AUTH_COOKIE_NAME } from "@/lib/auth/session";
+import { LoginSchema } from "@/lib/validation/schemas";
 
 export async function POST(req: Request) {
   try {
-    const { email, password } = await req.json();
+    const body = await req.json();
+    const parseResult = LoginSchema.safeParse(body);
 
-    if (!email || !password) {
+    if (!parseResult.success) {
       return NextResponse.json(
-        { success: false, data: null, error: { code: "INVALID_INPUT", message: "Email and password are required." } },
+        { 
+          success: false, 
+          data: null, 
+          error: { 
+            code: "INVALID_INPUT", 
+            message: parseResult.error.errors[0]?.message || "Invalid email or password format." 
+          } 
+        },
         { status: 400 }
       );
     }
+
+    const { email, password } = parseResult.data;
 
     const user = await dbFindUserByEmail(email);
     if (!user) {
@@ -46,8 +57,8 @@ export async function POST(req: Request) {
     res.cookies.set(AUTH_COOKIE_NAME, token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      maxAge: 7 * 24 * 60 * 60,
+      sameSite: "strict",
+      maxAge: 24 * 60 * 60,
       path: "/",
     });
 
