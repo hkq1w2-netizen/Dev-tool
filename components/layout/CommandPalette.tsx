@@ -69,7 +69,7 @@ export default function CommandPalette() {
         <div className="max-h-96 overflow-y-auto p-2 divide-y divide-gray-100 dark:divide-gray-800/50">
           {results.length === 0 ? (
             <div className="p-8 text-center text-gray-500 dark:text-gray-400">
-              No developer tools found matching "{query}".
+              No developer tools found matching &quot;{query}&quot;.
             </div>
           ) : (
             results.map((tool) => (
