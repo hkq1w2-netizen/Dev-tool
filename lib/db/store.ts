@@ -17,13 +17,12 @@ export async function dbCreateUser(userData: {
   plan?: "free" | "pro" | "developer";
 }) {
   await dbConnect();
-  
-  const isFirst = await User.countDocuments() === 0;
 
   const user = await User.create({
     ...userData,
     email: userData.email.toLowerCase().trim(),
-    role: userData.role || (isFirst ? "admin" : "user"), // Wait, user specifically asked to remove this!
+    role: userData.role || "user",
+    plan: userData.plan || "free",
   });
   return {
     id: user._id.toString(),
@@ -95,7 +94,7 @@ export async function dbGetProjects(userId: string) {
 // STATS
 export async function dbGetStats() {
   await dbConnect();
-  
+
   const totalUsers = await User.countDocuments();
   const proUsers = await User.countDocuments({ plan: { $in: ["pro", "developer"] } });
   const totalProjects = await SavedProject.countDocuments();

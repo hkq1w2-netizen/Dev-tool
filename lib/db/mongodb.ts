@@ -20,35 +20,35 @@ if (!global.mongooseCache) {
 
 export async function dbConnect(): Promise<typeof mongoose | null> {
   if (!MONGODB_URI) {
-    console.warn("MONGODB_URI is not defined in environment variables. Database operations will run in fallback mode.");
-    return null;
+    throw new Error("MONGODB_URI environment variable is missing.");
   }
 
-  if (cached.conn) {
+  if (cached.conn && mongoose.connection.readyState === 1) {
     return cached.conn;
   }
 
   if (!cached.promise) {
     const opts = {
-      bufferCommands: false,
-      serverSelectionTimeoutMS: 5000,
+      bufferCommands: true,
+      serverSelectionTimeoutMS: 10000,
     };
 
     cached.promise = mongoose.connect(MONGODB_URI, opts).then((m) => {
       console.log("Connected to MongoDB Atlas / Local Database successfully.");
       return m;
     }).catch((err) => {
-      console.warn("MongoDB connection failed:", err.message);
+      console.error("MongoDB connection failed:", err.message);
       cached.promise = null;
-      return null;
+      throw err;
     });
   }
 
   try {
     cached.conn = await cached.promise;
-  } catch {
+  } catch (err) {
     cached.promise = null;
     cached.conn = null;
+    throw err;
   }
 
   return cached.conn;
