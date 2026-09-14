@@ -36,7 +36,7 @@ export async function POST(req: Request) {
           data: null, 
           error: { 
             code: "INVALID_INPUT", 
-            message: parseResult.error.errors[0]?.message || "Invalid input payload." 
+            message: parseResult.error.issues[0]?.message || "Invalid input payload." 
           } 
         },
         { status: 400 }
