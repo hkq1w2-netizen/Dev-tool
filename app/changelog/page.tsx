@@ -3,7 +3,7 @@ import { generateSeoMetadata } from "@/lib/seo/metadata";
 
 export const metadata = generateSeoMetadata({
   title: "Platform Changelog",
-  description: "DevTools.online product updates, new tool releases, and platform enhancements.",
+  description: "DevKitLab product updates, new tool releases, and platform enhancements.",
   path: "/changelog",
 });
 
@@ -23,7 +23,7 @@ export default function ChangelogPage() {
             <span className="px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-500 font-mono font-bold text-xs">v1.0.0</span>
             <span className="text-xs text-gray-400">September 14, 2026</span>
           </div>
-          <h2 className="text-lg font-bold text-gray-900 dark:text-white">Initial Platform Release</h2>
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white">Initial DevKitLab Release</h2>
           <ul className="space-y-1 text-xs text-gray-600 dark:text-gray-300">
             <li className="flex items-center space-x-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /><span>Launched 15 Phase-1 client-side developer utilities</span></li>
             <li className="flex items-center space-x-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /><span>Secure MongoDB Atlas auth & private user dashboard</span></li>

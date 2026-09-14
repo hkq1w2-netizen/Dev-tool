@@ -58,14 +58,14 @@ export default function Footer() {
               <Wrench className="w-4 h-4" />
             </div>
             <span className="font-bold text-lg text-gray-900 dark:text-white font-mono">
-              DevTool<span className="text-brand-600">.online</span>
+              DevKit<span className="text-brand-600">Lab</span>
             </span>
           </Link>
           <p className="text-xs text-gray-500 dark:text-gray-400 max-w-sm leading-relaxed">
             Developer tools that just work. Fast, privacy-conscious browser utilities for engineers, students, freelancers, and technical teams worldwide.
           </p>
           <div className="flex items-center space-x-4 text-xs font-mono text-gray-400">
-            <span>© {new Date().getFullYear()} DevTool.online</span>
+            <span>© {new Date().getFullYear()} DevKitLab</span>
             <span>•</span>
             <span className="text-emerald-500 font-semibold">Systems Operational</span>
           </div>

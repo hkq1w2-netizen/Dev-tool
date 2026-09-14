@@ -71,7 +71,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-lg tracking-tight text-gray-900 dark:text-white font-mono">
-                DevTool<span className="text-brand-600">.online</span>
+                DevKit<span className="text-brand-600">Lab</span>
               </span>
               <span className="text-[10px] text-gray-500 dark:text-gray-400 font-mono -mt-1">
                 Developer utilities

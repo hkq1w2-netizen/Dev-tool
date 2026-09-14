@@ -2,8 +2,8 @@ import { ShieldCheck, Zap, Lock, Code2 } from "lucide-react";
 import { generateSeoMetadata } from "@/lib/seo/metadata";
 
 export const metadata = generateSeoMetadata({
-  title: "About DevTool.online — Product & Privacy Philosophy",
-  description: "Learn why DevTool.online was built: fast, privacy-conscious browser developer tools with client-side execution.",
+  title: "About DevKitLab — Product & Privacy Philosophy",
+  description: "Learn why DevKitLab was built: fast, privacy-conscious browser developer tools with 100% client-side execution.",
   path: "/about",
 });
 
@@ -12,27 +12,27 @@ export default function AboutPage() {
     <div className="max-w-4xl mx-auto space-y-10 py-6">
       <div className="space-y-4">
         <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-          About DevTool.online
+          About DevKitLab
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-          DevTool.online is a fast, privacy-conscious suite of browser utilities built for software engineers, students, freelancers, and technical teams worldwide.
+          DevKitLab is a fast, privacy-conscious suite of browser utilities built for software engineers, devops specialists, students, freelancers, and enterprise tech teams worldwide.
         </p>
       </div>
 
       <div className="space-y-6 text-sm text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-200 dark:border-gray-800 pt-8">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Our Product Philosophy</h2>
         <p>
-          Most online developer utility sites send your formatted JSON, API responses, JWT tokens, and plain-text passwords over the network to remote backend servers. We believe developers deserve a privacy-first alternative.
+          Most online developer utility platforms transmit your formatted JSON, API payloads, authorization headers, JWT tokens, and database connection strings over remote HTTP networks to backend servers. We built DevKitLab to pioneer a zero-trust, client-first developer paradigm.
         </p>
         <p>
-          Our platform is architected around client-side execution. Whenever technically possible, data transformations happen entirely inside your Web browser memory using Web Crypto API and native string parsing engines.
+          Our platform is engineered for pure client-side execution. Data transformations happen entirely inside your Web browser memory using standard Web APIs, Web Crypto, and native string engines. Your raw data never reaches our servers or third-party loggers.
         </p>
       </div>
 
       <div className="p-8 rounded-2xl bg-brand-50 dark:bg-brand-950/40 border border-brand-200 dark:border-brand-900/50 space-y-3">
         <h3 className="font-bold text-lg text-brand-900 dark:text-brand-200">The Master Developer Security Promise</h3>
         <p className="text-xs text-brand-800 dark:text-brand-300 leading-relaxed">
-          How can you format, validate, encode, decode, generate, and convert developer data safely without risking data leaks or server logging? Every utility on DevTool.online runs 100% locally inside your browser runtime. Your JSON payloads, Base64 strings, regex patterns, API tokens, and timestamps never touch remote servers or third-party databases.
+          How can you format, validate, encode, decode, generate, and convert developer data safely without risking data leaks, server logging, or API security breaches? Every utility on DevKitLab runs 100% locally inside your browser's Web JavaScript runtime. Your JSON, Base64 strings, regex patterns, API tokens, and timestamps never touch remote servers, external databases, or third-party tracking scripts.
         </p>
       </div>
 

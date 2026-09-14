@@ -29,7 +29,7 @@ export const ALL_TOOLS: ToolMetadata[] = [
     supportedInputs: ["application/json", "text/plain"],
     supportedOutputs: ["application/json"],
     keywords: ["json formatter", "format json online", "json beautifier", "pretty print json", "indent json"],
-    seoTitle: "Free Online JSON Formatter & Beautifier — DevTools.online",
+    seoTitle: "Free Online JSON Formatter & Beautifier — DevKitLab",
     seoDescription: "Format, beautify, and clean up JSON code online instantly. 100% private client-side JSON formatter with error highlighting.",
     howTo: [
       "Paste your raw or minified JSON string into the input editor.",
@@ -69,7 +69,7 @@ export const ALL_TOOLS: ToolMetadata[] = [
     supportedInputs: ["application/json", "text/plain"],
     supportedOutputs: ["text/plain"],
     keywords: ["json validator", "validate json", "check json syntax", "json syntax checker"],
-    seoTitle: "JSON Syntax Validator & Checker — DevTools.online",
+    seoTitle: "JSON Syntax Validator & Checker — DevKitLab",
     seoDescription: "Validate JSON string syntax online. Find syntax errors, missing quotes, and invalid structures with line-by-line validation.",
     howTo: [
       "Paste your JSON input into the validator editor.",
@@ -103,7 +103,7 @@ export const ALL_TOOLS: ToolMetadata[] = [
     supportedInputs: ["application/json"],
     supportedOutputs: ["application/json"],
     keywords: ["json minifier", "compress json", "minify json online", "json compact"],
-    seoTitle: "Free Online JSON Minifier & Compressor — DevTools.online",
+    seoTitle: "Free Online JSON Minifier & Compressor — DevKitLab",
     seoDescription: "Compress and minify JSON files instantly. Remove unnecessary whitespace and reduce payload sizes for production APIs.",
     howTo: [
       "Paste your indented JSON code.",
@@ -133,7 +133,7 @@ export const ALL_TOOLS: ToolMetadata[] = [
     supportedInputs: ["application/json"],
     supportedOutputs: ["text/html"],
     keywords: ["json viewer", "json tree viewer", "inspect json online", "json explorer"],
-    seoTitle: "Interactive JSON Viewer & Tree Explorer — DevTools.online",
+    seoTitle: "Interactive JSON Viewer & Tree Explorer — DevKitLab",
     seoDescription: "Explore and inspect complex JSON objects with collapsible tree nodes, data type coloring, and search.",
     howTo: [
       "Paste your JSON document.",
@@ -163,7 +163,7 @@ export const ALL_TOOLS: ToolMetadata[] = [
     supportedInputs: ["text/plain"],
     supportedOutputs: ["text/plain"],
     keywords: ["base64 encoder", "encode base64", "base64 encode online", "string to base64"],
-    seoTitle: "Base64 String Encoder Online — DevTools.online",
+    seoTitle: "Base64 String Encoder Online — DevKitLab",
     seoDescription: "Encode text to Base64 format online. 100% private client-side conversion with UTF-8 encoding support.",
     howTo: [
       "Type or paste text into the input field.",
@@ -193,7 +193,7 @@ export const ALL_TOOLS: ToolMetadata[] = [
     supportedInputs: ["text/plain"],
     supportedOutputs: ["text/plain"],
     keywords: ["base64 decoder", "decode base64", "base64 to text", "decode base64 online"],
-    seoTitle: "Base64 String Decoder Online — DevTools.online",
+    seoTitle: "Base64 String Decoder Online — DevKitLab",
     seoDescription: "Decode Base64 strings to plaintext online. Client-side browser decoding with UTF-8 text restoration.",
     howTo: [
       "Paste your Base64 encoded string.",
@@ -223,7 +223,7 @@ export const ALL_TOOLS: ToolMetadata[] = [
     supportedInputs: ["text/plain"],
     supportedOutputs: ["text/plain"],
     keywords: ["url encoder", "encode url", "percent encoding", "url component encoder"],
-    seoTitle: "URL & URI Percent Encoder — DevTools.online",
+    seoTitle: "URL & URI Percent Encoder — DevKitLab",
     seoDescription: "Encode special characters into standard URL percent-encoding for query strings and web addresses.",
     howTo: [
       "Enter the text or URL parameter.",
@@ -253,7 +253,7 @@ export const ALL_TOOLS: ToolMetadata[] = [
     supportedInputs: ["text/plain"],
     supportedOutputs: ["text/plain"],
     keywords: ["url decoder", "decode url", "percent decoder", "url component decoder"],
-    seoTitle: "URL Percent Decoder — DevTools.online",
+    seoTitle: "URL Percent Decoder — DevKitLab",
     seoDescription: "Decode percent-encoded URLs and query parameters back into original readable text.",
     howTo: [
       "Paste your percent-encoded URL string.",
@@ -283,7 +283,7 @@ export const ALL_TOOLS: ToolMetadata[] = [
     supportedInputs: [],
     supportedOutputs: ["text/plain"],
     keywords: ["uuid generator", "guid generator", "generate uuid v4", "random uuid online"],
-    seoTitle: "Cryptographic UUID / GUID Generator — DevTools.online",
+    seoTitle: "Cryptographic UUID / GUID Generator — DevKitLab",
     seoDescription: "Generate cryptographically secure UUID v4 strings online. Batch generation with custom formatting.",
     howTo: [
       "Select the quantity of UUIDs to generate (1 to 100).",
@@ -314,7 +314,7 @@ export const ALL_TOOLS: ToolMetadata[] = [
     supportedInputs: ["text/plain"],
     supportedOutputs: ["text/plain"],
     keywords: ["timestamp converter", "unix epoch converter", "epoch to date", "date to timestamp"],
-    seoTitle: "Unix Timestamp & Epoch Converter — DevTools.online",
+    seoTitle: "Unix Timestamp & Epoch Converter — DevKitLab",
     seoDescription: "Convert Unix epoch timestamps to UTC, ISO 8601, and local date formats instantly.",
     howTo: [
       "Enter a epoch timestamp (seconds or milliseconds) or pick a date.",
@@ -344,7 +344,7 @@ export const ALL_TOOLS: ToolMetadata[] = [
     supportedInputs: ["text/plain"],
     supportedOutputs: ["application/json", "text/plain"],
     keywords: ["regex tester", "test regex online", "regular expression tester", "javascript regex"],
-    seoTitle: "Online Regex Tester & Matcher — DevTools.online",
+    seoTitle: "Online Regex Tester & Matcher — DevKitLab",
     seoDescription: "Test regular expressions in real-time with match highlighting, capture groups, and flag controls.",
     howTo: [
       "Enter your regex pattern and flags (e.g. /\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\b/gi).",
@@ -374,7 +374,7 @@ export const ALL_TOOLS: ToolMetadata[] = [
     supportedInputs: ["text/plain"],
     supportedOutputs: ["text/plain"],
     keywords: ["hex to rgb", "rgb to hex", "color converter", "hex to hsl", "color picker online"],
-    seoTitle: "HEX to RGB & HSL Color Converter — DevTools.online",
+    seoTitle: "HEX to RGB & HSL Color Converter — DevKitLab",
     seoDescription: "Convert HEX color codes to RGB and HSL values online. Features visual color swatches and instant format copying.",
     howTo: [
       "Paste or select a color using the color picker.",
@@ -404,7 +404,7 @@ export const ALL_TOOLS: ToolMetadata[] = [
     supportedInputs: ["text/html"],
     supportedOutputs: ["text/html"],
     keywords: ["html formatter", "beautify html", "html pretty print", "clean html code"],
-    seoTitle: "Free HTML Formatter & Beautifier — DevTools.online",
+    seoTitle: "Free HTML Formatter & Beautifier — DevKitLab",
     seoDescription: "Format and beautify HTML code online with automatic tag alignment and clean element indentation.",
     howTo: [
       "Paste your raw HTML snippet.",
@@ -434,7 +434,7 @@ export const ALL_TOOLS: ToolMetadata[] = [
     supportedInputs: ["text/css"],
     supportedOutputs: ["text/css"],
     keywords: ["css formatter", "beautify css", "css pretty print", "format css online"],
-    seoTitle: "Online CSS Formatter & Beautifier — DevTools.online",
+    seoTitle: "Online CSS Formatter & Beautifier — DevKitLab",
     seoDescription: "Format CSS code blocks online. Beautify stylesheets with consistent selector and rule indentation.",
     howTo: [
       "Paste your CSS code.",
@@ -464,7 +464,7 @@ export const ALL_TOOLS: ToolMetadata[] = [
     supportedInputs: ["text/markdown"],
     supportedOutputs: ["text/html", "text/markdown"],
     keywords: ["markdown editor", "markdown preview", "markdown to html", "live markdown editor"],
-    seoTitle: "Live Markdown Editor & HTML Previewer — DevTools.online",
+    seoTitle: "Live Markdown Editor & HTML Previewer — DevKitLab",
     seoDescription: "Edit Markdown online with real-time rendered HTML preview. Export rendered HTML or copy raw Markdown.",
     howTo: [
       "Type or paste Markdown syntax into the left panel.",

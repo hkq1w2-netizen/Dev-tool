@@ -5,9 +5,9 @@ import Footer from "@/components/layout/Footer";
 import CommandPalette from "@/components/layout/CommandPalette";
 
 export const metadata: Metadata = {
-  title: "DevTool.online — Fast, Privacy-Conscious Developer Utilities",
-  description: "Developer tools that just work. Format JSON, validate schemas, encode Base64, generate UUIDs, test Regex, and convert timestamps instantly in your browser.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://devtools.online"),
+  title: "DevKitLab — Fast, Privacy-Conscious Developer Utilities & Browser Tools",
+  description: "Developer tools that just work. Format JSON, validate schemas, encode Base64, generate UUIDs, test Regex, and convert timestamps instantly in your browser with 100% client-side privacy.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://devkitlab.com"),
 };
 
 export default function RootLayout({

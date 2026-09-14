@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { ALL_TOOLS, TOOL_CATEGORIES } from "@/lib/tools/registry";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://devtools.online";
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://devkitlab.com";
 
   const staticPages = [
     "",

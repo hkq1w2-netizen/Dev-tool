@@ -159,7 +159,7 @@ export default function HomePage() {
             How can I format, validate, encode, decode, generate, and convert developer data safely in my browser without risking data leaks, server logging, or API security breaches?
           </h3>
           <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-            Every utility on <strong>DevTool.online</strong> runs 100% locally inside your browser&apos;s Web JavaScript runtime using client-side Web Crypto and native string parsing engines. Your JSON, Base64 strings, regex patterns, API tokens, and timestamps never touch a remote server, external database, or third-party tracking script. This solves all privacy, compliance, security, latency, and data leakage concerns in one single architecture.
+            Every utility on <strong>DevKitLab</strong> runs 100% locally inside your browser&apos;s Web JavaScript runtime using client-side Web Crypto and native string parsing engines. Your JSON, Base64 strings, regex patterns, API tokens, and timestamps never touch a remote server, external database, or third-party tracking script. This solves all privacy, compliance, security, latency, and data leakage concerns in one single architecture.
           </p>
         </div>
       </section>

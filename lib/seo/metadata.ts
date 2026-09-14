@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://devtools.online";
-const SITE_NAME = "DevTool.online";
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://devkitlab.com";
+const SITE_NAME = "DevKitLab";
 
 export function generateSeoMetadata({
   title,
@@ -20,19 +20,25 @@ export function generateSeoMetadata({
     title: `${title} | ${SITE_NAME}`,
     description,
     keywords: [
-      "devtool",
-      "developer tools online",
-      "free developer utilities",
-      "browser devtools",
-      "json formatter online",
-      "base64 encoder decoder",
-      "uuid generator v4",
-      "regex tester javascript",
-      "unix timestamp converter",
-      "html css beautifier",
+      "DevKitLab",
+      "DevKitLab developer tools",
+      "free browser developer tools",
+      "privacy-first developer utilities",
+      "online json formatter validator",
+      "base64 encoder decoder browser",
+      "client side uuid generator",
+      "regex tester debugger online",
+      "epoch unix timestamp converter",
+      "jwt token decoder validator",
+      "html css javascript beautifier minifier",
+      "cron expression parser online",
+      "markdown previewer editor",
+      "diff checker code comparison",
+      "color code hex rgb converter",
+      "hash generator md5 sha256",
       ...keywords,
     ],
-    authors: [{ name: "DevTool.online Team" }],
+    authors: [{ name: "DevKitLab Engineering Team" }],
     creator: SITE_NAME,
     publisher: SITE_NAME,
     metadataBase: new URL(APP_URL),
@@ -51,7 +57,7 @@ export function generateSeoMetadata({
       card: "summary_large_image",
       title,
       description,
-      creator: "@devtool_online",
+      creator: "@devkitlab",
     },
     robots: {
       index: true,

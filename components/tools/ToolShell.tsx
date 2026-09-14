@@ -100,19 +100,19 @@ export default function ToolShell({ tool, initialInput = "" }: ToolShellProps) {
       case "json-validator":
       case "json-minifier":
       case "json-viewer":
-        setInput('{\n  "name": "DevTools.online",\n  "type": "SaaS",\n  "features": ["Privacy", "Fast", "SEO"],\n  "active": true\n}');
+        setInput('{\n  "name": "DevKitLab",\n  "type": "SaaS",\n  "features": ["Privacy", "Fast", "SEO"],\n  "active": true\n}');
         break;
       case "base64-encoder":
-        setInput("Hello World! Welcome to DevTools.online");
+        setInput("Hello World! Welcome to DevKitLab");
         break;
       case "base64-decoder":
-        setInput("SGVsbG8gV29ybGQhIFdlbGNvbWUgdG8gRGV2VG9vbHMub25saW5l");
+        setInput("SGVsbG8gV29ybGQhIFdlbGNvbWUgdG8gRGV2S2l0TGFi");
         break;
       case "url-encoder":
-        setInput("https://devtools.online/search?q=JSON Formatter & Validator");
+        setInput("https://devkitlab.com/search?q=JSON Formatter & Validator");
         break;
       case "url-decoder":
-        setInput("https%3A%2F%2Fdevtools.online%2Fsearch%3Fq%3DJSON%20Formatter%20%26%20Validator");
+        setInput("https%3A%2F%2Fdevkitlab.com%2Fsearch%3Fq%3DJSON%20Formatter%20%26%20Validator");
         break;
       case "uuid-generator":
         setInput("");
@@ -121,19 +121,19 @@ export default function ToolShell({ tool, initialInput = "" }: ToolShellProps) {
         setInput("1735689600");
         break;
       case "regex-tester":
-        setInput("Contact support@devtools.online or info@example.org for help.");
+        setInput("Contact support@devkitlab.com or info@example.org for help.");
         break;
       case "hex-to-rgb":
         setInput("#3b82f6");
         break;
       case "html-formatter":
-        setInput('<div class="container"><h1>DevTools</h1><p>Online Utilities</p></div>');
+        setInput('<div class="container"><h1>DevKitLab</h1><p>Online Utilities</p></div>');
         break;
       case "css-formatter":
         setInput("body{margin:0;padding:0;background:#000;color:#fff}h1{font-size:24px}");
         break;
       case "markdown-editor":
-        setInput("# DevTools.online\n\n- Fast\n- Privacy-first\n- Client-side processing\n\n```js\nconsole.log('Ready!');\n```");
+        setInput("# DevKitLab\n\n- Fast\n- Privacy-first\n- Client-side processing\n\n```js\nconsole.log('Ready!');\n```");
         break;
       default:
         setInput("Sample input text");

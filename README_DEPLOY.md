@@ -1,6 +1,6 @@
-# DevTool.online — Production Deployment Guide
+# DevKitLab — Production Deployment Guide
 
-Follow these steps to deploy **DevTool.online** to production (Vercel + MongoDB Atlas).
+Follow these steps to deploy **DevKitLab** to production (Vercel + MongoDB Atlas).
 
 ---
 
@@ -12,7 +12,7 @@ Follow these steps to deploy **DevTool.online** to production (Vercel + MongoDB 
 4. Under **Network Access**, add `0.0.0.0/0` (allow access from anywhere) to permit Vercel's dynamic serverless IP ranges.
 5. Retrieve your connection string (URI):
    ```env
-   MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.xxx.mongodb.net/devtools?retryWrites=true&w=majority
+   MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.xxx.mongodb.net/devkitlab?retryWrites=true&w=majority
    ```
 
 ---
@@ -25,7 +25,7 @@ Ensure the following variables are configured in Vercel (or your hosting provide
 | :--- | :--- | :--- |
 | `MONGODB_URI` | Full MongoDB Atlas connection string | `mongodb+srv://...` |
 | `AUTH_SECRET` | 32+ character random secret for JWT signatures | `super_secret_jwt_key_here` |
-| `NEXT_PUBLIC_APP_URL` | Domain URL for canonical metadata & SEO | `https://devtools.online` |
+| `NEXT_PUBLIC_APP_URL` | Domain URL for canonical metadata & SEO | `https://devkitlab.com` |
 | `NEXT_PUBLIC_ADSENSE_CLIENT` | (Optional) Google AdSense Client ID | `ca-pub-xxxxxxxxxxxxxxxx` |
 | `NEXT_PUBLIC_ADSENSE_SLOT` | (Optional) Default AdSlot ID | `1234567890` |
 

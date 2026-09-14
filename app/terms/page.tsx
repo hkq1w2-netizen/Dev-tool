@@ -2,7 +2,7 @@ import { generateSeoMetadata } from "@/lib/seo/metadata";
 
 export const metadata = generateSeoMetadata({
   title: "Terms of Service",
-  description: "DevTools.online Terms of Service for using free developer utilities and Pro subscriptions.",
+  description: "DevKitLab Terms of Service for using free developer utilities and Pro subscriptions.",
   path: "/terms",
 });
 
@@ -15,7 +15,7 @@ export default function TermsPage() {
       <section className="space-y-3 pt-4 border-t border-gray-200 dark:border-gray-800">
         <h2 className="text-lg font-bold text-gray-900 dark:text-white">1. Acceptance of Terms</h2>
         <p>
-          By accessing or using DevTools.online, you agree to comply with and be bound by these Terms of Service.
+          By accessing or using DevKitLab, you agree to comply with and be bound by these Terms of Service.
         </p>
       </section>
 

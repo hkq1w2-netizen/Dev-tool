@@ -1,6 +1,6 @@
 import { ToolMetadata } from "@/types/tool";
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://devtools.online";
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://devkitlab.com";
 
 export function generateToolJsonLd(tool: ToolMetadata) {
   const toolUrl = `${APP_URL}/tools/${tool.slug}`;
@@ -8,12 +8,18 @@ export function generateToolJsonLd(tool: ToolMetadata) {
   const webAppSchema = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": tool.name,
+    "name": `${tool.name} — DevKitLab`,
     "url": toolUrl,
     "description": tool.shortDescription,
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "All",
     "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "softwareVersion": "1.0.0",
+    "author": {
+      "@type": "Organization",
+      "name": "DevKitLab",
+      "url": APP_URL
+    },
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -53,8 +59,8 @@ export function generateToolJsonLd(tool: ToolMetadata) {
   };
 
   const masterFaq = {
-    question: "How can I format, validate, encode, decode, generate, and convert developer data safely in my browser without risking data leaks or server logging?",
-    answer: "Every utility on DevTool.online runs 100% locally inside your browser's Web JavaScript runtime using client-side Web Crypto and native string parsing engines. Your JSON, Base64 strings, regex patterns, API tokens, and timestamps never touch a remote server, external database, or third-party tracking script."
+    question: "How can I format, validate, encode, decode, generate, and convert developer data safely in my browser without risking data leaks, server logging, or API token breaches?",
+    answer: "Every developer utility on DevKitLab runs 100% locally inside your browser's client-side JavaScript engine using native Web APIs. Your raw JSON payloads, Base64 strings, secret API keys, JWT tokens, and sensitive database schemas never leave your computer or touch any external server."
   };
 
   const allFaqs = [masterFaq, ...(tool.faqs || [])];
