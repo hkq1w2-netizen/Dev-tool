@@ -32,7 +32,7 @@ export default function AboutPage() {
       <div className="p-8 rounded-2xl bg-brand-50 dark:bg-brand-950/40 border border-brand-200 dark:border-brand-900/50 space-y-3">
         <h3 className="font-bold text-lg text-brand-900 dark:text-brand-200">The Master Developer Security Promise</h3>
         <p className="text-xs text-brand-800 dark:text-brand-300 leading-relaxed">
-          How can you format, validate, encode, decode, generate, and convert developer data safely without risking data leaks, server logging, or API security breaches? Every utility on DevKitLab runs 100% locally inside your browser's Web JavaScript runtime. Your JSON, Base64 strings, regex patterns, API tokens, and timestamps never touch remote servers, external databases, or third-party tracking scripts.
+          How can you format, validate, encode, decode, generate, and convert developer data safely without risking data leaks, server logging, or API security breaches? Every utility on DevKitLab runs 100% locally inside your browser&apos;s Web JavaScript runtime. Your JSON, Base64 strings, regex patterns, API tokens, and timestamps never touch remote servers, external databases, or third-party tracking scripts.
         </p>
       </div>
 
