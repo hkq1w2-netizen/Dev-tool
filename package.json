@@ -1,0 +1,39 @@
+{
+  "name": "devkitlab",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "validate:registry": "node scripts/validate-registry.mjs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "jszip": "^3.10.2",
+    "lucide-react": "^0.453.0",
+    "next": "15.5.24",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^4.10.38",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "tailwind-merge": "^2.5.4",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "15.5.24",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
